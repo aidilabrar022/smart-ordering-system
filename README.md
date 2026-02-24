@@ -35,3 +35,6 @@ This project is designed to simplify the ordering process in restaurants or cafe
 
 ## 📸 Preview
 ![Smart Ordering System](Cuplikan layar 2026-02-25 015343.png)
+
+## 🧑‍💻 Author
+Developed by [Aidil Abrar]
