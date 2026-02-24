@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom Cafe - Royal Dining Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cover Page - Name Card -->
+    <div id="coverPage" class="cover-page">
+        <div class="parchment-cover">
+            <div class="royal-seal">
+                <span class="seal-text">✠</span>
+            </div>
+            <h1 class="kingdom-title">KINGDOM CAFE</h1>
+            <p class="royal-motto">"Where Royalty Dines"</p>
+            <div class="royal-divider"></div>
+            <p class="established">Established in the Year of Our Lord 2026</p>
+            <button id="enterBtn" class="enter-button">Enter The Royal Hall</button>
+            <div class="royal-decoration">
+                <span class="crown">♔</span>
+                <span class="sword">⚔️</span>
+                <span class="shield">🛡️</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Menu Page -->
+    <div id="mainPage" class="main-page" style="display: none;">
+        <header class="royal-header">
+            <div class="castle-banner">
+                <h1>♔ KINGDOM CAFE ♔</h1>
+                <p class="banner-motto">Royal Dining Experience</p>
+            </div>
+            <div class="royal-navigation">
+                <button class="nav-btn active" onclick="showSection('menu')">Menu</button>
+                <button class="nav-btn" onclick="showSection('cart')">Cart</button>
+                <button class="nav-btn" onclick="showSection('income')">Daily Income</button>
+            </div>
+        </header>
+
+        <!-- Menu Section -->
+        <section id="menuSection" class="menu-section">
+            <div class="menu-container">
+                <!-- Food Category -->
+                <div class="menu-category">
+                    <h2 class="category-title">👑 Royal Feast (Main Course)</h2>
+                    <div class="menu-items">
+                        <div class="menu-item" onclick="addToCart('Grilled Dragon Steak', 85000, '🥩', 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Grilled Dragon Steak" class="item-image">
+                                <div class="item-icon-overlay">🥩</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Grilled Dragon Steak</h3>
+                                <p>Tender dragon meat grilled over castle fire, served with roasted vegetables and ancient spices</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 85.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" onclick="addToCart('Knight\'s Roasted Chicken', 65000, '🍗', 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Knight's Roasted Chicken" class="item-image">
+                                <div class="item-icon-overlay">🍗</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Knight's Roasted Chicken</h3>
+                                <p>Whole chicken roasted with herbs and spices, fit for a knight's feast. Served with castle potatoes</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 65.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" onclick="addToCart('Royal Beef Stew', 75000, '🍲', 'https://images.unsplash.com/photo-1569929238190-869826b1bb05?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1569929238190-869826b1bb05?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Royal Beef Stew" class="item-image">
+                                <div class="item-icon-overlay">🍲</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Royal Beef Stew</h3>
+                                <p>Slow-cooked beef with castle vegetables in rich gravy, simmered for hours in a royal cauldron</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 75.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" onclick="addToCart('King\'s Lamb Chops', 95000, '🍖', 'https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&h=500&fit=crop&crop=center" 
+                                     alt="King's Lamb Chops" class="item-image">
+                                <div class="item-icon-overlay">🍖</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>King's Lamb Chops</h3>
+                                <p>Premium lamb chops seasoned with royal spices, grilled to perfection. Served with mint jelly</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 95.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks Category -->
+                <div class="menu-category">
+                    <h2 class="category-title">🍷 Royal Beverages</h2>
+                    <div class="menu-items">
+                        <div class="menu-item" onclick="addToCart('Royal Mead', 45000, '🍯', 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Royal Mead" class="item-image">
+                                <div class="item-icon-overlay">🍯</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Royal Mead</h3>
+                                <p>Traditional honey wine aged in oak barrels. The drink of kings and queens since ancient times</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 45.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" onclick="addToCart('Castle Ale', 35000, '🍺', 'https://images.unsplash.com/photo-1566633808646-89c8bcd2d5f9?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1566633808646-89c8bcd2d5f9?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Castle Ale" class="item-image">
+                                <div class="item-icon-overlay">🍺</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Castle Ale</h3>
+                                <p>Freshly brewed ale from the castle brewery. A hearty drink for knights and commoners alike</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 35.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" onclick="addToCart('Royal Red Wine', 60000, '🍷', 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Royal Red Wine" class="item-image">
+                                <div class="item-icon-overlay">🍷</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Royal Red Wine</h3>
+                                <p>Fine red wine from the kingdom's sun-kissed vineyards. Aged to perfection in royal cellars</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 60.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" onclick="addToCart('Knight\'s Coffee', 25000, '☕', 'https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Knight's Coffee" class="item-image">
+                                <div class="item-icon-overlay">☕</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Knight's Coffee</h3>
+                                <p>Strong black coffee brewed from exotic beans. Keeps knights awake during long night watches</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 25.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts Category -->
+                <div class="menu-category">
+                    <h2 class="category-title">🍰 Royal Sweets</h2>
+                    <div class="menu-items">
+                        <div class="menu-item" onclick="addToCart('Queen\'s Chocolate Cake', 40000, '🎂', 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Queen's Chocolate Cake" class="item-image">
+                                <div class="item-icon-overlay">🎂</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Queen's Chocolate Cake</h3>
+                                <p>Rich chocolate cake layered with cream. A royal dessert fit for queens and princesses</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 40.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" onclick="addToCart('Royal Fruit Tart', 35000, '🥧', 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Royal Fruit Tart" class="item-image">
+                                <div class="item-icon-overlay">🥧</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Royal Fruit Tart</h3>
+                                <p>Fresh seasonal fruits on buttery pastry with sweet cream. A refreshing end to any royal meal</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 35.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-item" onclick="addToCart('Castle Cheesecake', 45000, '🧀', 'https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=500&h=500&fit=crop&crop=center')">
+                            <div class="item-visual">
+                                <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=500&h=500&fit=crop&crop=center" 
+                                     alt="Castle Cheesecake" class="item-image">
+                                <div class="item-icon-overlay">🧀</div>
+                            </div>
+                            <div class="item-content">
+                                <h3>Castle Cheesecake</h3>
+                                <p>Creamy cheesecake with berry compote. A sweet treasure from the castle kitchens</p>
+                                <div class="item-footer">
+                                    <span class="item-price">Rp 45.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cartSection" class="cart-section" style="display: none;">
+            <div class="cart-container">
+                <h2 class="cart-title">🛒 Your Royal Order</h2>
+                <div id="cartItems" class="cart-items">
+                    <p class="empty-cart">Your cart is empty. Please select items from the menu.</p>
+                </div>
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">Rp 0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%):</span>
+                        <span id="tax">Rp 0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span><strong>Total:</strong></span>
+                        <span id="total"><strong>Rp 0</strong></span>
+                    </div>
+                </div>
+                <div class="cart-buttons">
+                    <button class="btn-clear" onclick="clearCart()">Clear Cart</button>
+                    <button class="btn-print" onclick="printReceipt()">🖨️ Print Receipt</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Income Section -->
+        <section id="incomeSection" class="income-section" style="display: none;">
+            <div class="income-container">
+                <h2 class="income-title">💰 Daily Income Report</h2>
+                <div class="income-stats">
+                    <div class="stat-box">
+                        <h3>Total Orders Today</h3>
+                        <p id="totalOrders" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Total Revenue</h3>
+                        <p id="totalRevenue" class="stat-number">Rp 0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Average Order Value</h3>
+                        <p id="avgOrderValue" class="stat-number">Rp 0</p>
+                    </div>
+                </div>
+                <div class="income-history">
+                    <h3>Today's Transactions</h3>
+                    <div id="transactionHistory" class="transaction-list">
+                        <p class="no-transactions">No transactions yet today.</p>
+                    </div>
+                </div>
+                <button class="btn-reset" onclick="resetDailyData()">Reset Daily Data</button>
+            </div>
+        </section>
+
+        <footer class="royal-footer">
+            <p>♔ Kingdom Cafe - Where Every Meal is a Royal Feast ♔</p>
+            <p>Contact: kingdom.cafe@royal.com | Phone: (021) 1234-5678</p>
+        </footer>
+    </div>
+
+    <!-- Print Receipt Template -->
+    <div id="receiptTemplate" style="display: none;">
+        <div class="receipt">
+            <div class="receipt-header">
+                <h2>♔ KINGDOM CAFE ♔</h2>
+                <p>Royal Dining Experience</p>
+                <p>Castle Main Street, Kingdom City</p>
+                <p>Tel: (021) 1234-5678</p>
+                <div class="receipt-divider"></div>
+            </div>
+            <div class="receipt-info">
+                <p><strong>Date:</strong> <span id="receiptDate"></span></p>
+                <p><strong>Time:</strong> <span id="receiptTime"></span></p>
+                <p><strong>Receipt #:</strong> <span id="receiptNumber"></span></p>
+                <div class="receipt-divider"></div>
+            </div>
+            <div class="receipt-items" id="receiptItems"></div>
+            <div class="receipt-total">
+                <div class="receipt-row">
+                    <span>Subtotal:</span>
+                    <span id="receiptSubtotal"></span>
+                </div>
+                <div class="receipt-row">
+                    <span>Tax (10%):</span>
+                    <span id="receiptTax"></span>
+                </div>
+                <div class="receipt-divider"></div>
+                <div class="receipt-row total">
+                    <span><strong>TOTAL:</strong></span>
+                    <span id="receiptTotal"></span>
+                </div>
+            </div>
+            <div class="receipt-footer">
+                <p>----------</p>
+                <p>Thank you for dining with us!</p>
+                <p>May your day be as royal as your meal!</p>
+                <p>----------</p>
+                <p>www.kingdomcafe.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
