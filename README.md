@@ -34,4 +34,4 @@ This project is designed to simplify the ordering process in restaurants or cafe
 - Payment gateway integration
 
 ## 📸 Preview
-![Smart Ordering System](preview.png)
+![Smart Ordering System](Cuplikan layar 2026-02-25 015343.png)
