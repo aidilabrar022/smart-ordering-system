@@ -22,9 +22,7 @@ This project is designed to simplify the ordering process in restaurants or cafe
 - HTML
 - CSS
 - JavaScript
-## 📸 Preview
 
-![Smart Ordering System](preview.png)
 ---
 
 ## 🚀 Future Improvements
