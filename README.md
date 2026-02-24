@@ -32,7 +32,7 @@ This project is designed to simplify the ordering process in restaurants or cafe
 - Payment gateway integration
 
 ## 📸 Preview
-![Smart Ordering System](preview.png.png)
+![Smart Ordering System](preview.png)
 
 ## 🧑‍💻 Author
 Developed by [Aidil Abrar]
